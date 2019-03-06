@@ -22,7 +22,7 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-adicionar = (add) => {
+adicionar = () => {
 	add = 5;
 	return 'o valor da variavel agora é '+ add;
 }
@@ -52,13 +52,13 @@ multiplica = (x, y, z) => {
 multiplica(1,2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-"Preencha todos os valores corretamente!"
+//"Preencha todos os valores corretamente!"
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
 multiplica(1,2,4)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-10
+//10
 
 /*
 Crie uma função com as seguintes características:
@@ -90,4 +90,5 @@ retornaValor() //false
 retornaValor(2) //2
 retornaValor(2,4) //6
 retornaValor(2,4,3) //2
+retornaValor(false, undefined, null) //null
 ```
