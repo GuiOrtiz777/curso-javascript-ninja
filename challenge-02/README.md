@@ -9,10 +9,10 @@ soma = (x,y) => {
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-let somando = soma(4,5) + 9
+let somando = soma(4,5) + 5
 
 // Qual o valor atualizado dessa variável?
-18
+14
 
 // Declare uma nova variável, sem valor.
 let add;
