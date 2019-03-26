@@ -2,17 +2,17 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-var array = [2, 3, 1, 4, 5, 6];
+var array = [2, "Guilherme", 1, true, 5, {}];
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-var retornaArray = (array2 = [2, 3, 9, 7, 4]) => array2;
+var retornaArray = arr => arr;
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-retornaArray()[1]; //3
+console.log(retornaArray()[1]); //'Guilherme'
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -31,11 +31,12 @@ var arrayDiferente = [1, "Ortiz", true, [3, 5, 3], {}];
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-retornaArray2(arrayDiferente, 0);
-retornaArray2(arrayDiferente, 1);
-retornaArray2(arrayDiferente, 2);
-retornaArray2(arrayDiferente, 3);
-retornaArray2(arrayDiferente, 4);
+console.log(retornaArray2(arrayDiferente, 0));
+console.log(retornaArray2(arrayDiferente, 1));
+console.log(retornaArray2(arrayDiferente, 2));
+console.log(retornaArray2(arrayDiferente, 3));
+console.log(retornaArray2(arrayDiferente, 4));
+
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -52,122 +53,65 @@ os livros.
 */
 var book = nomeLivro => {
   var objetos = {
-    nomeLivro1: {
+    "As aventuras de jack Binks": {
       quantidadePaginas: 40,
       autor: "LT hero",
       editora: "Fundão"
     },
-    nomeLivro2: {
+    "Na torre de Babel": {
       quantidadePaginas: 37,
       autor: "Lob Sang",
       editora: "Gonzaguinha"
     },
-    nomeLivro3: {
+    "Eyed of torneto": {
       quantidadePaginas: 21,
       autor: "Steve tey",
       editora: "Reliquias"
     }
   };
-  return nomeLivro != undefined ? objetos[nomeLivro] : objetos;
+  return !nomeLivro ? objetos : objetos[nomeLivro];
 };
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-book();
-//nomeLivro1: {quantidadePaginas: 40, autor: "LT hero", editora: "Fundão"}
-//nomeLivro2: {quantidadePaginas: 37, autor: "Lob Sang", editora: "Gonzaguinha"}
-//nomeLivro3: {quantidadePaginas: 21, autor: "Steve tey", editora: "Reliquias"}
+console.log(book());
+//As aventuras de jack Binks: {quantidadePaginas: 40, autor: "LT hero", editora: "Fundão"}
+//Eyed of torneto: {quantidadePaginas: 37, autor: "Lob Sang", editora: "Gonzaguinha"}
+//Na torre de Babel: {quantidadePaginas: 21, autor: "Steve tey", editora: "Reliquias"}
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-var book = nomeLivro => {
-  var objetos = {
-    nomeLivro1: {
-      quantidadePaginas: 40,
-      autor: "LT hero",
-      editora: "Fundão"
-    },
-    nomeLivro2: {
-      quantidadePaginas: 37,
-      autor: "Lob Sang",
-      editora: "Gonzaguinha"
-    },
-    nomeLivro3: {
-      quantidadePaginas: 21,
-      autor: "Steve tey",
-      editora: "Reliquias"
-    }
-  };
-  return (
-    "O livro " +
+var nomeLivro = "Na torre de Babel";
+console.log(
+  "O livro " +
     nomeLivro +
     " tem " +
-    objetos[nomeLivro].quantidadePaginas +
+    book(nomeLivro).quantidadePaginas +
     " páginas!"
-  );
-};
-book("nomeLivro2"); //"O livro nomeLivro2 tem 37 páginas!"
+); //"O livro nomeLivro2 tem 37 páginas!"
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-var book = nomeLivro => {
-  var objetos = {
-    nomeLivro1: {
-      quantidadePaginas: 40,
-      autor: "LT hero",
-      editora: "Fundão"
-    },
-    nomeLivro2: {
-      quantidadePaginas: 37,
-      autor: "Lob Sang",
-      editora: "Gonzaguinha"
-    },
-    nomeLivro3: {
-      quantidadePaginas: 21,
-      autor: "Steve tey",
-      editora: "Reliquias"
-    }
-  };
-  return (
-    "O autor do livro " + nomeLivro + " é " + objetos[nomeLivro].autor + "."
-  );
-};
-book("nomeLivro2"); //"O autor do livro nomeLivro2 é Lob Sang."
+var nomeLivro = "Na torre de Babel";
+console.log(
+  "O autor do livro " + nomeLivro + " é " + book(nomeLivro).autor + "."
+); //"O autor do livro nomeLivro2 é Lob Sang."
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-var book = nomeLivro => {
-  var objetos = {
-    nomeLivro1: {
-      quantidadePaginas: 40,
-      autor: "LT hero",
-      editora: "Fundão"
-    },
-    nomeLivro2: {
-      quantidadePaginas: 37,
-      autor: "Lob Sang",
-      editora: "Gonzaguinha"
-    },
-    nomeLivro3: {
-      quantidadePaginas: 21,
-      autor: "Steve tey",
-      editora: "Reliquias"
-    }
-  };
-  return (
-    "O livro " +
+var nomeLivro = "Na torre de Babel";
+console.log(
+  "O livro " +
     nomeLivro +
     " foi publicado pela editora " +
-    objetos[nomeLivro].editora +
+    book(nomeLivro).editora +
     "."
-  );
-};
-book("nomeLivro2"); //"O livro nomeLivro2 foi publicado pela editora Gonzaguinha."
+); //"O livro nomeLivro2 foi publicado pela editora Gonzaguinha."
