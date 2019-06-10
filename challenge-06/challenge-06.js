@@ -21,7 +21,7 @@ desafio.
 var teams = ['são paulo', 'fluminense', 'inter', 'bahia', 'santos'];
 
 console.log( 'Times que estão participando do campeonato:', teams );
-Times que estão participando do campeonato: (5) ["são paulo", "fluminense", "inter", "bahia", "santos"]0: "são paulo"1: "fluminense"2: "inter"3: "bahia"4: "santos"length: 5__proto__: Array(0)
+//Times que estão participando do campeonato: (5) ["são paulo", "fluminense", "inter", "bahia", "santos"]0: "são paulo"1: "fluminense"2: "inter"3: "bahia"4: "santos"length: 5__proto__: Array(0)
 
 
 /*
@@ -56,16 +56,16 @@ Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
 showTeamPosition(3);
-O time que está em 3º lugar é o inter.
+//O time que está em 3º lugar é o inter.
 
 showTeamPosition(1);
-O time que está em 1º lugar é o são paulo.
+//O time que está em 1º lugar é o são paulo.
 
 showTeamPosition(5);
-O time que está em 5º lugar é o santos.
+//O time que está em 5º lugar é o santos.
 
 showTeamPosition(6);
-Não temos a informação do time que está nessa posição.
+//Não temos a informação do time que está nessa posição.
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
