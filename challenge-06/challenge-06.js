@@ -44,9 +44,7 @@ showTeamPosition = (numero) => {
   if (numero <= 5) {
 	  return console.log("O time que está em "+numero+"º lugar é o "+teams[numero-1]+".");
   }
-  else {
-    return console.log("Não temos a informação do time que está nessa posição.");
-  }
+  return console.log("Não temos a informação do time que está nessa posição.");
 }
 //showTeamPosition(1);
 //O time que está em 1º lugar é o são paulo.
