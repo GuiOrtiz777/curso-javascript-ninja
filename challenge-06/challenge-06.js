@@ -87,25 +87,27 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     "Não temos o equivalente hexadecimal para [COR]."
 */
 convertToHex = (cor) => {
+  var hexa;
   switch(cor) {
     case 'red':
-      console.log("O hexadecimal para a cor "+ cor+" é FF0000.");
+      hexa = 'FF0000';
       break;
     case 'blue':
-      console.log("O hexadecimal para a cor "+ cor+" é 0000FF.");
+      hexa = '0000FF';
       break;
-    case 'yeloow':
-      console.log("O hexadecimal para a cor "+ cor+" é FFFF00.");
+    case 'yellow':
+      hexa = 'FFFF00';
       break;
     case 'white':
-      console.log("O hexadecimal para a cor "+ cor+" é FFFFFF.");
+      hexa = 'FFFFFF';
       break;
     case 'black':
-      console.log("O hexadecimal para a cor "+ cor+" é 000000.");
+      hexa = '000000';
       break;
     default: 
-      console.log( "Não temos o equivalente hexadecimal para "+cor+".");
+      console.log( "Não temos o equivalente hexadecimal para "+ cor +".");
   }
+  return console.log("O hexadecimal para a cor "+ cor +" é "+ hexa +".");
 }
 
 /*
