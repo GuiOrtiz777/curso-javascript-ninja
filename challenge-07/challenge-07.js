@@ -29,7 +29,7 @@ frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
 // ?
-console.log("O segundo elemento do segundo array é " + array[5][2] + ".")
+console.log("O segundo elemento do segundo array é " + array[5][1] + ".")
 
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
@@ -74,16 +74,12 @@ Só vamos mudar o range:
 */
 console.log( 'Números pares entre 100 e 120:' );
 // ?
-var numero = 100;
-for(var i = numero; i <= 120; i++) {
-  numero % 2 === 0 ? console.log(numero) : '';
-	numero++;
+for(var i = 100; i <= 120; i++) {
+  i % 2 === 0 ? console.log(i) : '';
 }
 
 console.log( 'Números ímpares entre 111 e 125:' );
 // ?
-var numero = 111;
-for(var i = numero; i < 125; i++) {
-  numero % 2 !== 0 ? console.log(numero) : '';
-	numero++;
+for(var i = 111; i <= 125; i++) {
+  i % 2 !== 0 ? console.log(i) : '';
 }
