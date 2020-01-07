@@ -56,7 +56,7 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   "Operação inválida."
 */
 // ?
-calcula = (operator) => {
+calculator = (operator) => {
     return calcular = (x,y) => {
         var result;
 
