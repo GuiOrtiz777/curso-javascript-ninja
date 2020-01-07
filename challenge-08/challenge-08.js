@@ -56,30 +56,19 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   "Operação inválida."
 */
 // ?
-function calculator(operacao) {
-    return calc = (x,y) => {
-		var result;
+calcula = (operator) => {
+    return calcular = (x,y) => {
+        var result;
 
-		switch(operacao) {
-            case '+':
-                 result = x + y;
-            	break;
-            case '-':
-                 result = x - y;
-            	break;
-            case '*':
-                 result = x * y;
-            	break;
-            case '/':
-                 result = x / y;
-            	break;
-            case '%':
-                 result = x % y;
-            	break;
-            default:
-                return `Operação inválida.`
+        var operacao = {
+            '+': () => `Resultado da operação: ${x} ${operator} ${y} = ${result = x + y}.`,
+            '-': () => `Resultado da operação: ${x} ${operator} ${y} = ${result = x - y}.`,
+            '*': () => `Resultado da operação: ${x} ${operator} ${y} = ${result = x * y}.`,
+            '/': () => `Resultado da operação: ${x} ${operator} ${y} = ${result = x / y}.`,
+            '%': () => `Resultado da operação: ${x} ${operator} ${y} = ${result = x % y}.`,
+            'default': () => `Operação inválida.`
         }
-		return `Resultado da operação: ${x} ${operacao} ${y} = ${result}.`
+        return (operacao[operator] || operacao['default'])();
     }
 }
 /*
